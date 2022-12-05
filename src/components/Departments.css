@@ -1,0 +1,77 @@
+/* .card-img-top {
+    background-image: url('./media/shopping.png');
+    height:30px;
+} */
+
+.dept-card {
+  background-color: white(0, 0, 0, 0.7);
+  opacity: 0.9;
+  box-shadow: 3px 5px black;
+  font-weight: 800;
+  color: black;
+  border: 0.2rem solid #39545a;
+}
+
+.card-footer {
+    border: none;
+}
+
+.dept-btn {
+  background-color: rgb(57, 84, 90, 1) !important;
+  color: white !important;
+}
+
+@media screen and (max-width:376px) {
+    .shop-pic {
+        height:85rem;
+        padding: 0;
+    }
+    .dept-card {
+       /* height: 15rem; */
+    }
+    .card-title {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width:481px) {
+    .shop-pic {
+        height:150rem;
+        padding: 0;
+    }
+    .dept-card {
+       height: 15rem;
+    }
+    
+}
+
+@media (max-width: 769px) {
+  .shop-pic {
+    height: 200rem;
+  }
+  .dept-card {
+    /* height: 10rem; */
+    margin: 0 0.75rem;
+  }
+}
+
+@media (max-width: 1110px) {
+    .shop-pic {
+      height: 110rem;
+    }
+    .card-box {
+        justify-content: center;
+        flex-direction: column;
+
+    }
+    .dept-card {
+      /* height: 10rem; */
+     
+      width: 20rem;
+    }
+    .card-title {
+        font-size: 20px !important;
+    }
+  }
+
+

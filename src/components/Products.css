@@ -1,0 +1,69 @@
+.product-wrap {
+  background-image: url(./media/shopping.png);
+  background-color: "rgba(0, 0, 0, 0.9)";
+ display: flex;
+ height: 100vh;
+ justify-content: center;
+ /* flex-direction: column; */
+ justify-content: space-around;
+ align-items: center;
+ flex-wrap: wrap;
+}
+.title-box {
+    display: inline-block!important;
+}
+
+ .product-title {
+
+    color: gold;
+    font-family: "Lobster", cursive;
+    text-shadow: 4px 4px black;
+ }
+.prdct {
+    height: 15rem;
+    width: 15rem;
+    border: 4px solid #39545a ;
+    box-shadow: 3px 3px black;
+}
+
+.card {
+  max-width: 540px;
+  border: 3px solid #39545a;
+  box-shadow: 3px 3px black;
+}
+
+.product-font {
+    font-size: 13px;
+    font-weight: 600;
+    color: #39545a ;
+}
+
+/* .product-cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}  */
+
+/* .product-card {
+  height: 20rem;
+  width: 20rem;
+  margin: 5%;
+} */
+
+.img-frame {
+  min-height: 50px;
+  border-bottom: 3px solid #39545a;
+}
+
+.product-img {
+  width: 100%;
+  height: 25vw;
+  object-fit: cover;
+}
+
+/* .card-box {
+    justify-content: center!important;
+    flex-direction: column!important;
+} */

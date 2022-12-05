@@ -1,0 +1,31 @@
+
+.shop-search {
+    border: 2px solid white!important;
+    color:black!important;
+    min-width: 5%;
+    margin-left:4rem;
+}
+
+.search-store-btn {
+    color: white !important;
+    border: 2px solid white !important;
+}
+
+.cart-box {
+    margin-right: 4rem;
+}
+
+.cart {
+    color: white;
+}
+
+@media (max-width:768px) {
+    .nav-contain {
+      flex-direction: column;
+    }
+    .cart-box {
+        margin-right: 0;
+    }
+   
+    
+}

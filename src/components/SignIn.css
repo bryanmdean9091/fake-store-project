@@ -1,0 +1,19 @@
+.sign-in-form{
+background-color: rgb(0, 0, 0, .5);
+padding: 2rem;
+border-radius: 1rem;
+min-width: 45%;
+}
+.sign-in-field {
+    min-width: 80%;
+}
+.btn-sign, .btn-link {
+    background-color:  #39545a !important;
+    color: white !important;
+}
+
+.btn-sign {
+    min-width: 80%;
+    border: 3px solid white;
+}
+
