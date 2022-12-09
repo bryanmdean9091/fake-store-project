@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
+// import { getFakePoducts } from './components/Utils'
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Departments from "./components/Departments";
 import Products from "./components/Products";
+import Details from "./components/Details";
+import { callApi } from './components/Departments'
 import axios from "axios";
 
 
@@ -16,6 +19,8 @@ export default function App() {
   const [products, setProducts] = useState({});
   const [cat, setCat] = useState("");
   const [productOpen, setProductOpen] = useState(false);
+  const [category, setCategory] = useState([]);
+  const [detailsOpen, setDetailsOpen] = useState(false);
 
   useEffect(() => {
     axios({
@@ -23,54 +28,86 @@ export default function App() {
       url:`https://fakestoreapi.com/products/category/${cat}`
     }).then(res=>  { 
       console.log(res.data);
-      console.log(res.data[0].title);
+      setData(res.data)
+    }).catch(e=>console.log(e))
+    .finally(() =>{setLoading(false)
+        setClose(false);
+        // setProductOpen(true);
+    })  
+   },[cat])
+
+   const callApi = (categoryType) => {
+    axios({
+      method:"GET",
+      url:`https://fakestoreapi.com/products/category/${categoryType}`
+    }).then(res=>  { 
+      console.log(res.data);
       setData(res.data)
     }).catch(e=>console.log(e))
     .finally(() =>{setLoading(false)
         setClose(false);
         setProductOpen(true);
-    })  
-   },[cat])
+    })
+  }
 
-
+// useEffect(() => {
+//   console.log(data)
+// }, [data, home])
 
   return (
-    <>
-  
-      {home != true && <Header 
+   <>
+      {home == false && <Header 
       setHome={setHome}
       setOpen={setOpen}
       setClose={setClose} 
-      setLoading={setLoading}
-      setData={setData}
+       setLoading={setLoading}
+       setData={setData}
        
       />}
-      {open != false && (
+      {open == true && (
         
           <Nav />
       )}
-      {close != false && (
-        
+      {close == true && (
+        <>
         <Departments 
           setOpen={setOpen}
           setClose={setClose}
           setLoading={setLoading}
           setData={setData}
           setCat={setCat}
+          category={category}
+          setCategory={setCategory}
+          setProductOpen={setProductOpen}
            />
-           
-      ) }
-      {productOpen != false && (
+          </> 
+      )}
+      {productOpen == true && (
+      
         <Products
-        department={data}
+        data={data}
+        setProductOpen={setProductOpen}
+        setLoading={setLoading}
+        setData={setData}
+        setDetailsOpen={setDetailsOpen}
+        callApi={callApi}
+        setClose={setClose}
+        setOpen={setOpen}
          />
       )}
-         
-        
-      
-
-      {/* <SignIn /> */}
-      {/* <Register /> */}
+      {detailsOpen == true && (
+        <Details 
+          setDetailsOpen={setDetailsOpen}
+          setProductOpen={setProductOpen}
+          data={data}
+          callApi={callApi}
+          setCat={setCat}
+          setData={setData}
+          setLoading={setLoading}
+          setClose={setClose}
+        />
+      )}
+     
     </>
   );
 }

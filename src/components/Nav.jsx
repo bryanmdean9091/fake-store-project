@@ -14,10 +14,13 @@ export default function Nav() {
 
     <MDBNavbar bgColor='#39545a' className='shadow-none'>
       <MDBContainer fluid className='nav-contain d-flex align-items-center'>
-        <MDBInputGroup tag="form" className='d-flex  w-auto mb-0'>
+        {/* <MDBInputGroup tag="form" className='d-flex  w-auto mb-0'>
           <input className='form-control shop-search' placeholder="Search Store" aria-label="Search" type='text' />
           <MDBBtn className="search-store-btn" outline>Search</MDBBtn>
-        </MDBInputGroup>
+        </MDBInputGroup> */}
+        <div className='logo'>
+          Fill the Void
+        </div>
         <div className='cart-box'>
         <MDBBadge pill color='danger'>0</MDBBadge>
               <span>

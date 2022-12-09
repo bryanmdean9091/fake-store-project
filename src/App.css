@@ -2,3 +2,30 @@
   box-sizing: border-box;
   
 }
+
+
+.error-msg {
+  text-align: center;
+ 
+}
+
+.loadingBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading {
+  height: 15rem;
+  width: 15rem;
+  background-image: url('./components/media/loading.gif');
+  background-size: cover;
+
+}
+
+.errorBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
