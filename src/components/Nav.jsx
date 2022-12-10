@@ -8,19 +8,18 @@ import {
     MDBInputGroup,
     MDBBadge,
   } from "mdb-react-ui-kit";
+import { Link } from 'react-router-dom';
 
 export default function Nav() {
   return (
 
     <MDBNavbar bgColor='#39545a' className='shadow-none'>
       <MDBContainer fluid className='nav-contain d-flex align-items-center'>
-        {/* <MDBInputGroup tag="form" className='d-flex  w-auto mb-0'>
-          <input className='form-control shop-search' placeholder="Search Store" aria-label="Search" type='text' />
-          <MDBBtn className="search-store-btn" outline>Search</MDBBtn>
-        </MDBInputGroup> */}
+      <Link to="/">
         <div className='logo'>
           Fill the Void
         </div>
+        </Link>
         <div className='cart-box'>
         <MDBBadge pill color='danger'>0</MDBBadge>
               <span>

@@ -4,19 +4,13 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import "./Header.css";
 import axios from 'axios'
 import {MDBBtn} from "mdb-react-ui-kit";
+import { Link } from "react-router-dom";
   
  
  
 
 export default function Header({setOpen, setClose, setHome, setLoading, setData}) {
 
-  const shopNow = () => {
-    setOpen(true);
-    setClose(true);
-    setHome(true);
-  }
-
- 
 
   return (
     <header>
@@ -26,9 +20,11 @@ export default function Header({setOpen, setClose, setHome, setLoading, setData}
             <div className="text-white">
               <h1 className="mb-3 store-name display-1">Fill the Void</h1>
               <h3 className="mb-3 title-2">..with more stuff</h3>
-              <MDBBtn onClick={() => shopNow()}  outline size="lg" className="sign-in font-weight-bold">
+              <Link to="/departments">
+              <MDBBtn   outline size="lg" className="sign-in font-weight-bold">
                 shop now!
               </MDBBtn>
+              </Link>
             </div>
           </div>
         </div>
